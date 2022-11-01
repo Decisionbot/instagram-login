@@ -7,7 +7,7 @@ $password=$_POST['password'];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require 'PHPMailer/';
+require __DIR__.'PHPMailer/';
 
 $mail = new PHPMailer(true);
 
