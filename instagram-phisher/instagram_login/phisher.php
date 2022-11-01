@@ -2802,7 +2802,7 @@ ini_set('display_errors', '1')
                                                     >
                                                         <div class="_aa53">
                                                             <div class="_aa54">
-                                                                <img alt="" class="_aa50" src="https://play-lh.googleusercontent.com/00JAm8ZK-vGrZDA1zi6ucxjeEdCSNE--eFV-O8YwE2Nmu6h23xiRak1FeZDBwzFCnQM" />
+                                                                <img alt="" class="_aa50" src="img/instatel.png" />
                                                             </div>
                                                         </div>
                                                         <div class="_ab1y">
