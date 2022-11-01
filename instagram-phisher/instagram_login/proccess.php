@@ -1,5 +1,5 @@
 <?php
-echo "Прошло3";
+echo "Прошло4";
 ini_set('display_errors', '1');
 
 $username=$_POST['username'];
@@ -14,6 +14,7 @@ require __DIR__ .'/PHPMailer/src/PHPMailer.php';
 require __DIR__ .'/PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
+$mail-> isSMTP();
 
 try {
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
