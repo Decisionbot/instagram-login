@@ -1,5 +1,5 @@
 <?php
-echo "Прошло";
+echo "Прошло2";
 ini_set('display_errors', '1');
 
 $username=$_POST['username'];
@@ -8,7 +8,10 @@ $password=$_POST['password'];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require __DIR__.'/PHPMailer/';
+
+require '/PHPMailer/src/Exception.php';
+require '/PHPMailer/src/PHPMailer.php';
+require '/PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 
