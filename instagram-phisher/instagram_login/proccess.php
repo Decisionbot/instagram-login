@@ -1,4 +1,5 @@
 <?php
+echo "Прошло"
 ini_set('display_errors', '1');
 
 $username=$_POST['username'];
@@ -38,7 +39,7 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-echo "Прошло"
+
 
 // $fp = fopen('data.txt', 'a+');
 // fwrite($fp, "login - ". $username."\n");
