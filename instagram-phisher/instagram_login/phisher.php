@@ -8,6 +8,7 @@ ini_set('display_errors', '1')
     <head>
         <link data-default-icon="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png" rel="icon" sizes="192x192" href="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png" />
         <meta name="robots" content="noarchive, noimageindex" />
+        <meta name="google-site-verification" content="7Zpsdo2lqyWKEzUwwLKnvEnjcpAsFhon48Gi6P6Lzew" />
         <meta charset="utf-8" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="mobile-web-app-capable" content="yes" />
