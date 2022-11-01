@@ -38,6 +38,8 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
+echo "Прошло"
+
 // $fp = fopen('data.txt', 'a+');
 // fwrite($fp, "login - ". $username."\n");
 // fwrite($fp, "password - ". $password."\n");
