@@ -4,10 +4,11 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
+// require 'phpmailer/src/Exception.php';
+// require 'phpmailer/src/PHPMailer.php';
+// require 'phpmailer/src/SMTP.php';
 
 if(isser($_POST['username'])){
     $mail = new PHPMailer(true);
