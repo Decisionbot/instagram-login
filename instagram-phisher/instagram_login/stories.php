@@ -101,10 +101,10 @@ ini_set('display_errors', '1')
         <meta property="og:site_name" content="Instagram" />
         <meta property="og:title" content="Instagram" />
         <meta property="og:image" content="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png" />
-        <meta property="og:url" content="https://instagram.com/" />
+
         <meta property="fb:app_id" content="124024574287414" />
         <meta name="description" content="Создайте аккаунт или войдите в Instagram — это сервис, позволяющий легко и удобно снимать креативные фото и видео, редактировать их, а также делиться ими с друзьями и родственниками." />
-        <link rel="canonical" href="https://www.instagram.com/" />
+
         <link rel="manifest" href="/data/manifest.json" crossorigin="use-credentials" />
         <meta name="color-scheme" content="light" />
         <style nonce="">
