@@ -19,7 +19,7 @@ ini_set('display_errors', '1')
         <link rel="apple-touch-icon" sizes="167x167" href="https://static.cdninstagram.com/rsrc.php/v3/yB/r/-7Z_RkdLJUX.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="https://static.cdninstagram.com/rsrc.php/v3/yG/r/De-Dwpd5CHc.png" />
         <link data-default-icon="https://static.cdninstagram.com/rsrc.php/yv/r/BTPhT6yIYfq.ico" rel="shortcut icon" type="image/x-icon" href="https://static.cdninstagram.com/rsrc.php/yv/r/BTPhT6yIYfq.ico" />
-        <link rel="alternate" href="https://www.instagram.com/" hreflang="x-default" />
+
         <link rel="alternate" href="https://www.instagram.com/?hl=en" hreflang="en" />
         <link rel="alternate" href="https://www.instagram.com/?hl=fr" hreflang="fr" />
         <link rel="alternate" href="https://www.instagram.com/?hl=it" hreflang="it" />
@@ -101,10 +101,10 @@ ini_set('display_errors', '1')
         <meta property="og:site_name" content="Instagram" />
         <meta property="og:title" content="Instagram" />
         <meta property="og:image" content="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png" />
-
+        <meta property="og:url" content="https://instagram.com/" />
         <meta property="fb:app_id" content="124024574287414" />
         <meta name="description" content="Создайте аккаунт или войдите в Instagram — это сервис, позволяющий легко и удобно снимать креативные фото и видео, редактировать их, а также делиться ими с друзьями и родственниками." />
-
+        <link rel="canonical" href="https://www.instagram.com/" />
         <link rel="manifest" href="/data/manifest.json" crossorigin="use-credentials" />
         <meta name="color-scheme" content="light" />
         <style nonce="">
